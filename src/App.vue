@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <my-switch v-model="active" active-color="red" inactive-color="green" name="input"></my-switch>
+    <my-radio label="1" v-model="gender">男</my-radio>
+    <my-radio label="0" v-model="gender">女</my-radio>
+    <my-radio label="0" v-model="gender"></my-radio>
   </div>
 </template>
 
@@ -9,7 +11,7 @@ export default {
   name: 'App',
   data () {
     return {
-      active: false
+      gender: 1
     }
   },
   methods: {}
