@@ -5,6 +5,7 @@ import MyDialog from './components/MyDialog'
 import MyInput from './components/MyInput'
 import MySwitch from './components/MySwitch'
 import MyRadio from './components/MyRadio'
+import MyRadioGroup from './components/MyRadioGroup'
 
 import './assets/fonts/font.scss'
 
@@ -13,6 +14,7 @@ Vue.component(MyDialog.name, MyDialog)
 Vue.component(MyInput.name, MyInput)
 Vue.component(MySwitch.name, MySwitch)
 Vue.component(MyRadio.name, MyRadio)
+Vue.component(MyRadioGroup.name, MyRadioGroup)
 
 Vue.config.productionTip = false
 

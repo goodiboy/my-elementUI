@@ -1,5 +1,5 @@
 <template>
-  <label class="my-radio" :class="{'is-checked':label === value}">
+  <label class="my-radio" :class="{'is-checked':label === model}">
     <!-- 小圆 -->
     <span class="my-radio__input">
       <span class="my-radio__inner"></span>
@@ -21,16 +21,25 @@
 <script>
 export default {
   name: 'MyRadio',
+  inject: {
+    radioGroup: {
+      default: null
+    }
+  },
   computed: {
     // 绑定新的数据
     model: {
       get () {
         // 父组件的值
-        return this.value
+        return this.radioGroup ? this.radioGroup.$attrs.value : this.value
       },
       set (value) {
         // 触发父组件的input事件，设置值
-        this.$emit('input', value)
+        if (this.radioGroup) {
+          this.radioGroup.$emit('input', value)
+        } else {
+          this.$emit('input', value)
+        }
       }
     }
   },
