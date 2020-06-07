@@ -1,19 +1,21 @@
 <template>
-  <div class="my-radio-group">
+  <div class="my-checkbox-group">
     <slot></slot>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'MyRadioGroup',
+  name: 'MyCheckboxGroup',
   provide () {
     return {
-      radioGroup: this
+      checkboxGroup: this
     }
   },
   props: {
-    value: null
+    value: {
+      type: Array
+    }
   }
 }
 </script>

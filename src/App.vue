@@ -1,12 +1,10 @@
 <template>
   <div id="app">
-    <my-radio label="1" v-model="gender">男</my-radio>
-    <my-radio label="0" v-model="gender">女</my-radio>
-
-    <my-radio-group v-model="gender">
-      <my-radio label="1">男</my-radio>
-      <my-radio label="0">女</my-radio>
-    </my-radio-group>
+    <my-checkbox v-model="active" label="1" name="abc"></my-checkbox>
+    <my-checkbox-group v-model="group">
+      <my-checkbox v-model="active" label="1" name="abc"></my-checkbox>
+      <my-checkbox v-model="active" label="2" name="abc"></my-checkbox>
+    </my-checkbox-group>
   </div>
 </template>
 
@@ -15,7 +13,8 @@ export default {
   name: 'App',
   data () {
     return {
-      gender: 1
+      active: false,
+      group: []
     }
   },
   methods: {}
